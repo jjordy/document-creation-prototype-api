@@ -1,0 +1,44 @@
+{
+  "name": "document-creation-prototype",
+  "version": "0.0.1",
+  "description": "Document Creation prototype CORE",
+  "engineStrict": true,
+  "private": true,
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "devDependencies": {
+    "@types/jest": "~23.3.2",
+    "@types/knex": "^0.14.26",
+    "@types/node": "~8.10.30",
+    "@types/uuid": "^3.4.4",
+    "faker": "^4.1.0",
+    "jest": "~23.6.0",
+    "prettier": "1.14.3",
+    "rimraf": "~2.6.2",
+    "ts-jest": "~23.10.2",
+    "tslint": "~5.11.0",
+    "tslint-config-prettier": "1.15.0",
+    "tslint-microsoft-contrib": "~5.2.1",
+    "tsutils": "~3.0.0",
+    "typescript": "~3.1.0"
+  },
+  "scripts": {
+    "dev": "nodemon ./build/src/main.js",
+    "clean": "rimraf coverage build tmp",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "tslint -t stylish --project \"tsconfig.json\"",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "author": "JordanvAddison <jordanrileyaddison@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "knex": "^0.15.2",
+    "lodash": "^4.17.11",
+    "sqlite3": "^4.0.2",
+    "tslib": "~1.9.3",
+    "uuid": "^3.3.2"
+  }
+}
